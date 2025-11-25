@@ -116,17 +116,30 @@ export default function Game({
 
       // Render
       ctx.clearRect(0, 0, 800, 400);
-      ctx.fillStyle = "#006400";
+      ctx.fillStyle = "#333333";
       ctx.fillRect(0, 0, 800, 400);
+      ctx.fillStyle = "#ffd700";
+      ctx.fillRect(0, 380, 800, 20);
 
       // Draw player
-      ctx.fillStyle = "#ffd700";
+      ctx.fillStyle = "#0000ff";
       ctx.fillRect(p.x, p.y, p.width, p.height);
+      ctx.fillStyle = "#ffff00";
+      ctx.beginPath();
+      ctx.arc(p.x + p.width / 2, p.y, p.width / 2, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#8b4513";
+      ctx.fillRect(p.x + p.width - 10, p.y + p.height / 2, 10, 10);
 
       // Draw obstacles
-      ctx.fillStyle = "#ffffff";
       obstaclesRef.current.forEach((o) => {
+        ctx.fillStyle = "#8b4513";
         ctx.fillRect(o.x, o.y, o.width, o.height);
+        const stripeHeight = 5;
+        for (let i = 0; i < o.height; i += stripeHeight * 2) {
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(o.x, o.y + i, o.width, stripeHeight);
+        }
       });
 
       requestAnimationFrame(loop);
