@@ -107,7 +107,8 @@ export default function Game({
       // Update score
       setScore((s) => {
         const newScore = s + 1;
-        document.getElementById('score-hud')?.innerText = `${newScore}m`;
+        const scoreHud = document.getElementById('score-hud');
+        if (scoreHud) scoreHud.innerText = `${newScore}m`;
         return newScore;
       });
 
