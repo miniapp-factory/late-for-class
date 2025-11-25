@@ -139,7 +139,7 @@ export default function Game({
 
       ctx.fillStyle = "#ffd700";
       ctx.font = "30px serif";
-      ctx.fillText(`Distance: ${Math.floor(scoreRef.current)} m`, 650, 30);
+      ctx.fillText(`Distance: ${Math.floor(score)} m`, 650, 30);
       requestAnimationFrame(loop);
     };
 
