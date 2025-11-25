@@ -122,26 +122,18 @@ export default function Game({
       ctx.fillRect(0, 380, 800, 20);
 
       // Draw player
-      ctx.fillStyle = "#0000ff";
-      ctx.fillRect(p.x, p.y, p.width, p.height);
-      ctx.fillStyle = "#ffff00";
-      ctx.beginPath();
-      ctx.arc(p.x + p.width / 2, p.y, p.width / 2, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = "#8b4513";
-      ctx.fillRect(p.x + p.width - 10, p.y + p.height / 2, 10, 10);
+      ctx.font = "48px serif";
+      ctx.fillText("🏃", p.x, p.y + p.height);
 
       // Draw obstacles
       obstaclesRef.current.forEach((o) => {
-        ctx.fillStyle = "#8b4513";
-        ctx.fillRect(o.x, o.y, o.width, o.height);
-        const stripeHeight = 5;
-        for (let i = 0; i < o.height; i += stripeHeight * 2) {
-          ctx.fillStyle = "#ffffff";
-          ctx.fillRect(o.x, o.y + i, o.width, stripeHeight);
-        }
+        ctx.font = "48px serif";
+        ctx.fillText("📚", o.x, o.y + o.height);
       });
 
+      ctx.fillStyle = "#ffd700";
+      ctx.font = "24px serif";
+      ctx.fillText(`Distance: ${Math.floor(score)} m`, 650, 30);
       requestAnimationFrame(loop);
     };
 
