@@ -140,3 +140,41 @@
 +Display the Distance Score clearly in the top-right corner of the canvas using large Gold text.
 +
 +Game Over: When a collision happens, show a "LATE!" popup with the Final Score and a "Retake Class" button to restart instantly.
+
+# 2025-11-25 12:44:49.856978
++Fix the bugs in the 'Late for Class' game:
++
++1. Fix the Backwards Runner:
++
++The runner emoji is facing the wrong way. Flip the player emoji horizontally using ctx.scale(-1, 1) so the student faces the right side of the screen (towards the obstacles).
++
++2. Fix the Score Counter:
++
++The score is stuck at 0. Ensure the score variable increments by 1 in every frame of the game loop.
++
++Force the UI to update: document.getElementById('score-hud').innerText = ... inside the animation loop.
++
++3. Visual Polish:
++
++Make the "Distance: 0m" text inside the canvas Gold and bigger (30px).
++
++Keep the University Green background for the page.
+
+# 2025-11-25 12:44:49.858381
++Fix the bugs in the 'Late for Class' game:
++
++1. Fix the Backwards Runner:
++
++The runner emoji is facing the wrong way. Flip the player emoji horizontally using ctx.scale(-1, 1) so the student faces the right side of the screen (towards the obstacles).
++
++2. Fix the Score Counter:
++
++The score is stuck at 0. Ensure the score variable increments by 1 in every frame of the game loop.
++
++Force the UI to update: document.getElementById('score-hud').innerText = ... inside the animation loop.
++
++3. Visual Polish:
++
++Make the "Distance: 0m" text inside the canvas Gold and bigger (30px).
++
++Keep the University Green background for the page.
