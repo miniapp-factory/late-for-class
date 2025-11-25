@@ -98,3 +98,45 @@
 +Player: Instead of a plain square, draw a blue rectangle for the body and a yellow circle on top for the head. Add a small brown rectangle on the back for a backpack.
 +
 +Obstacle: Draw the obstacle as a brown rectangle with white horizontal stripes, so it looks like a stack of books."
+
+# 2025-11-25 12:26:47.465992
++Rebuild the 'Late for Class' game using Emojis for graphics to ensure perfect performance.
++
++1. Visuals (Emoji Mode):
++
++Player: Draw a large 🏃 emoji as the character.
++
++Obstacles: Draw piles of 📚 emojis as the obstacles.
++
++Background: Use a dark asphalt grey for the road and a University Green (#006400) for the page background.
++
++2. Core Gameplay:
++
++Physics: The runner runs automatically. Tap/Click/Spacebar to jump.
++
++3. Fix Score & UI:
++
++Display the Distance Score clearly in the top-right corner of the canvas using large Gold text.
++
++Game Over: When a collision happens, show a "LATE!" popup with the Final Score and a "Retake Class" button to restart instantly.
+
+# 2025-11-25 12:26:47.466428
++Rebuild the 'Late for Class' game using Emojis for graphics to ensure perfect performance.
++
++1. Visuals (Emoji Mode):
++
++Player: Draw a large 🏃 emoji as the character.
++
++Obstacles: Draw piles of 📚 emojis as the obstacles.
++
++Background: Use a dark asphalt grey for the road and a University Green (#006400) for the page background.
++
++2. Core Gameplay:
++
++Physics: The runner runs automatically. Tap/Click/Spacebar to jump.
++
++3. Fix Score & UI:
++
++Display the Distance Score clearly in the top-right corner of the canvas using large Gold text.
++
++Game Over: When a collision happens, show a "LATE!" popup with the Final Score and a "Retake Class" button to restart instantly.
