@@ -184,3 +184,21 @@
 
 # 2025-11-25 14:01:44.236951
 +make the score functional 
+
+# 2025-11-25 15:49:47.095844
++Fix the Score Display:
++
++The score text is currently hidden or not updating.
++
++Action: Ensure the score text is drawn as the very last step of the game loop so it appears on top of the background.
++
++Style: Display "Distance: X m" in the top-right corner using Gold (#FFD700) text, size 30px.
+
+# 2025-11-25 15:49:47.096379
++Fix the Score Display:
++
++The score text is currently hidden or not updating.
++
++Action: Ensure the score text is drawn as the very last step of the game loop so it appears on top of the background.
++
++Style: Display "Distance: X m" in the top-right corner using Gold (#FFD700) text, size 30px.
