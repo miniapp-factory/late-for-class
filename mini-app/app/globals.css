@@ -94,5 +94,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(to right, #006400, #ffd700);
   }
 }
