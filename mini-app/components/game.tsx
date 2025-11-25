@@ -15,6 +15,7 @@ export default function Game({
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [score, setScore] = useState(0);
+  const scoreRef = useRef(0);
   const [speed, setSpeed] = useState(INITIAL_SPEED);
   const playerRef = useRef({
     x: 50,
@@ -99,13 +100,14 @@ export default function Game({
           p.y < o.y + o.height &&
           p.y + p.height > o.y
         ) {
-          onGameOver(Math.floor(score));
+          onGameOver(Math.floor(scoreRef.current));
           return;
         }
       }
 
       // Update score
-      setScore((s) => s + 1);
+      scoreRef.current += 1;
+      setScore(scoreRef.current);
 
       // Increase speed
       speedTimer += delta;
@@ -137,7 +139,7 @@ export default function Game({
 
       ctx.fillStyle = "#ffd700";
       ctx.font = "30px serif";
-      ctx.fillText(`Distance: ${Math.floor(score)} m`, 650, 30);
+      ctx.fillText(`Distance: ${Math.floor(scoreRef.current)} m`, 650, 30);
       requestAnimationFrame(loop);
     };
 
