@@ -105,7 +105,11 @@ export default function Game({
       }
 
       // Update score
-      setScore((s) => s + delta * 0.01);
+      setScore((s) => {
+        const newScore = s + 1;
+        document.getElementById('score-hud')?.innerText = `${newScore}m`;
+        return newScore;
+      });
 
       // Increase speed
       speedTimer += delta;
@@ -122,8 +126,12 @@ export default function Game({
       ctx.fillRect(0, 380, 800, 20);
 
       // Draw player
+      ctx.save();
+      ctx.translate(p.x + p.width, 0);
+      ctx.scale(-1, 1);
       ctx.font = "48px serif";
-      ctx.fillText("🏃", p.x, p.y + p.height);
+      ctx.fillText("🏃", 0, p.y + p.height);
+      ctx.restore();
 
       // Draw obstacles
       obstaclesRef.current.forEach((o) => {
@@ -132,7 +140,7 @@ export default function Game({
       });
 
       ctx.fillStyle = "#ffd700";
-      ctx.font = "24px serif";
+      ctx.font = "30px serif";
       ctx.fillText(`Distance: ${Math.floor(score)} m`, 650, 30);
       requestAnimationFrame(loop);
     };
