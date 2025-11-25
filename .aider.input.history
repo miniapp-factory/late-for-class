@@ -1,0 +1,72 @@
+
+# 2025-11-25 10:43:39.848983
++Code the following app
++```
++Develop a fully functional single-player endless runner game titled 'Late for Class' focused on high-speed reaction.
++
++1. Visuals & Assets:
++
++Style: Generate 'cute cartoon vector' style assets for the game.
++
++Player: A student character running with a backpack.
++
++Obstacles: Varied stacks of textbooks and piles of paper.
++
++Theme: Use a strict University Green and Gold color palette for the background gradient and UI elements to match the USM school spirit.
++
++2. Core Gameplay Mechanics:
++
++The student runs automatically from left to right.
++
++Physics: Implement smooth gravity. When the user taps the screen or presses the Spacebar, the student jumps. Holding the input longer should NOT affect jump height (fixed jump arc).
++
++Difficulty: The scrolling speed of the obstacles must gradually increase every 10 seconds to make the game harder.
++
++Collision: If the student touches a book stack, the game stops immediately.
++
++3. User Interface:
++
++Home Screen: Display the title 'Late for Class' with a pulsing 'Start Run' button.
++
++HUD: Show a high-contrast 'Distance Score' in the top right corner that updates in real-time.
++
++Game Over: Show a 'You are Late!' overlay with the final score and a 'Retake Subject' button that instantly restarts the game without reloading the page.
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-25 10:43:39.849521
++Code the following app
++```
++Develop a fully functional single-player endless runner game titled 'Late for Class' focused on high-speed reaction.
++
++1. Visuals & Assets:
++
++Style: Generate 'cute cartoon vector' style assets for the game.
++
++Player: A student character running with a backpack.
++
++Obstacles: Varied stacks of textbooks and piles of paper.
++
++Theme: Use a strict University Green and Gold color palette for the background gradient and UI elements to match the USM school spirit.
++
++2. Core Gameplay Mechanics:
++
++The student runs automatically from left to right.
++
++Physics: Implement smooth gravity. When the user taps the screen or presses the Spacebar, the student jumps. Holding the input longer should NOT affect jump height (fixed jump arc).
++
++Difficulty: The scrolling speed of the obstacles must gradually increase every 10 seconds to make the game harder.
++
++Collision: If the student touches a book stack, the game stops immediately.
++
++3. User Interface:
++
++Home Screen: Display the title 'Late for Class' with a pulsing 'Start Run' button.
++
++HUD: Show a high-contrast 'Distance Score' in the top right corner that updates in real-time.
++
++Game Over: Show a 'You are Late!' overlay with the final score and a 'Retake Subject' button that instantly restarts the game without reloading the page.
++```
++
++Generate an app logo and update the app metadata title and description.
