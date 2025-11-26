@@ -260,3 +260,45 @@
 +Keep the infinite runner logic.
 +
 +On Game Over, show a modal overlay with the final score and a "Retake Class" button.
+
+# 2025-11-26 04:50:15.787468
++1. Add Background Image:
++
++Instead of a solid color, draw an image for the game background.
++
++URL: https://img.freepik.com/free-vector/school-hallway-corridor-interior-background_107791-17327.jpg
++
++Implementation: Load this image into a useRef inside useEffect (just like the audio). In the game loop, draw this image first (ctx.drawImage) to cover the entire canvas.
++
++2. Fix Audio (Strict TypeScript):
++
++Define refs as useRef<HTMLAudioElement | null>(null).
++
++Initialize new Audio() inside useEffect.
++
++URLs:
++
++Jump: https://s3.amazonaws.com/freecodecamp/simonSound1.mp3
++
++Game Over: https://s3.amazonaws.com/freecodecamp/simonSound4.mp3
+
+# 2025-11-26 04:50:15.787873
++1. Add Background Image:
++
++Instead of a solid color, draw an image for the game background.
++
++URL: https://img.freepik.com/free-vector/school-hallway-corridor-interior-background_107791-17327.jpg
++
++Implementation: Load this image into a useRef inside useEffect (just like the audio). In the game loop, draw this image first (ctx.drawImage) to cover the entire canvas.
++
++2. Fix Audio (Strict TypeScript):
++
++Define refs as useRef<HTMLAudioElement | null>(null).
++
++Initialize new Audio() inside useEffect.
++
++URLs:
++
++Jump: https://s3.amazonaws.com/freecodecamp/simonSound1.mp3
++
++Game Over: https://s3.amazonaws.com/freecodecamp/simonSound4.mp3
