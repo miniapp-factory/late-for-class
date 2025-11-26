@@ -16,6 +16,8 @@ export default function Game({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [score, setScore] = useState(0);
   const scoreRef = useRef(0);
+  const jumpSound = useRef<HTMLAudioElement | null>(null);
+  const failSound = useRef<HTMLAudioElement | null>(null);
   const [speed, setSpeed] = useState(INITIAL_SPEED);
   const playerRef = useRef({
     x: 50,
@@ -43,11 +45,22 @@ export default function Game({
     };
   }, []);
 
+  // Load background image and audio
+  useEffect(() => {
+    const img = new Image();
+    img.src = "https://img.freepik.com/free-vector/school-hallway-corridor-interior-background_107791-17327.jpg";
+    bgImageRef.current = img;
+
+    jumpSound.current = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+    failSound.current = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
+  }, []);
+
   const jump = () => {
     const p = playerRef.current;
     if (p.onGround) {
       p.vy = JUMP_VELOCITY;
       p.onGround = false;
+      jumpSound.current?.play();
     }
   };
 
@@ -100,6 +113,7 @@ export default function Game({
           p.y < o.y + o.height &&
           p.y + p.height > o.y
         ) {
+          failSound.current?.play();
           onGameOver(Math.floor(scoreRef.current));
           return;
         }
@@ -118,8 +132,12 @@ export default function Game({
 
       // Render
       ctx.clearRect(0, 0, 800, 400);
-      ctx.fillStyle = "#333333";
-      ctx.fillRect(0, 0, 800, 400);
+      if (bgImageRef.current) {
+        ctx.drawImage(bgImageRef.current, 0, 0, 800, 400);
+      } else {
+        ctx.fillStyle = "#333333";
+        ctx.fillRect(0, 0, 800, 400);
+      }
       ctx.fillStyle = "#ffd700";
       ctx.fillRect(0, 380, 800, 20);
 
