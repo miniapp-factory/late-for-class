@@ -202,3 +202,61 @@
 +Action: Ensure the score text is drawn as the very last step of the game loop so it appears on top of the background.
 +
 +Style: Display "Distance: X m" in the top-right corner using Gold (#FFD700) text, size 30px.
+
+# 2025-11-26 04:12:12.284141
++Reskin the UI and fix the Audio using strict TypeScript patterns.
++
++1. The Audio Fix (Crucial):
++
++We need sound, but the previous build failed. You MUST follow these rules:
++
++Define refs as: const jumpSound = useRef<HTMLAudioElement | null>(null);
++
++Do not use new Audio() at the top level.
++
++Inside a useEffect that runs only once on mount, initialize the audio: jumpSound.current = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'); failSound.current = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
++
++Play sounds using: jumpSound.current?.play()
++
++2. UI Polish (University Arcade Theme):
++
++Layout: Center the game in a "Card" container with a University Green background, Gold border (border-4), and rounded corners.
++
++Scoreboard: Move the score outside the canvas to a digital display bar above the game. Use a large monospace font.
++
++Runner: Ensure the 🏃 emoji is flipped horizontally (ctx.scale(-1, 1)) to face the obstacles.
++
++3. Gameplay:
++
++Keep the infinite runner logic.
++
++On Game Over, show a modal overlay with the final score and a "Retake Class" button.
+
+# 2025-11-26 04:12:12.286488
++Reskin the UI and fix the Audio using strict TypeScript patterns.
++
++1. The Audio Fix (Crucial):
++
++We need sound, but the previous build failed. You MUST follow these rules:
++
++Define refs as: const jumpSound = useRef<HTMLAudioElement | null>(null);
++
++Do not use new Audio() at the top level.
++
++Inside a useEffect that runs only once on mount, initialize the audio: jumpSound.current = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'); failSound.current = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
++
++Play sounds using: jumpSound.current?.play()
++
++2. UI Polish (University Arcade Theme):
++
++Layout: Center the game in a "Card" container with a University Green background, Gold border (border-4), and rounded corners.
++
++Scoreboard: Move the score outside the canvas to a digital display bar above the game. Use a large monospace font.
++
++Runner: Ensure the 🏃 emoji is flipped horizontally (ctx.scale(-1, 1)) to face the obstacles.
++
++3. Gameplay:
++
++Keep the infinite runner logic.
++
++On Game Over, show a modal overlay with the final score and a "Retake Class" button.
