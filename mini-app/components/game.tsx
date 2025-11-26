@@ -49,7 +49,7 @@ export default function Game({
   // Load background image and audio
   useEffect(() => {
     const img = new Image();
-    img.src = "https://img.freepik.com/free-vector/school-hallway-corridor-interior-background_107791-17327.jpg";
+    img.src = "https://www.freepik.com/free-vector/vector-cartoon-school-college-corridor-with-bright-yellow-lockers-students-pupils-universit_3824586.htm#fromView=search&page=1&position=18&uuid=d33a2030-8927-46a1-85a1-9133627f40cc&query=college+hallway";
     bgImageRef.current = img;
 
     jumpSound.current = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
