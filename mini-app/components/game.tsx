@@ -18,6 +18,7 @@ export default function Game({
   const scoreRef = useRef(0);
   const jumpSound = useRef<HTMLAudioElement | null>(null);
   const failSound = useRef<HTMLAudioElement | null>(null);
+  const bgImageRef = useRef<HTMLImageElement | null>(null);
   const [speed, setSpeed] = useState(INITIAL_SPEED);
   const playerRef = useRef({
     x: 50,
